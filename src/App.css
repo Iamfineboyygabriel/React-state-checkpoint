@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+/* YourComponent.css */
+
+/* CSS Variables */
+:root {
+  --color-toggle: #00859a; 
+  --hover: #005e86;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Global Styles */
+body {
+  background-color: aqua;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  height: 26em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button Styles */
+button {
+  background: none;
+  border: 2px solid transparent;
+  color: black;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+button:hover,
+button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.toggle {
+  box-shadow: 0.3em 0.3em 0 0 var(--color-toggle),
+    inset 0.3em 0.3em 0 0 var(--color-toggle);
+}
+
+.toggle:hover,
+.toggle:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
 }
